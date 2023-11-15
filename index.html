@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="Icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Visakhapatnam</title>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <i class="fas fa-bars left-icon" id="openNavbar" onclick="openNav()"></i>
+            <h1 class="title">Visakhapatnam</h1>
+            <i class="fas fa-home right-icon" id="goHome" onclick="scrollToTop()"></i>
+        </div>
+    </nav>
+    
+    <div class="video-banner">
+        <video src="Banner_video.mp4" autoplay loop muted></video>
+    </div>
+    
+    <div class="categories">
+        <div class="category">
+            <img src="Hotels_nearby.png" alt="Hotels Nearby">
+            <h2>Hotels Nearby</h2>
+            <a href="hotels.html">Explore</a>
+        </div>
+        <div class="category">
+            <img src="Things_to_do.png" alt="Things to Do">
+            <h2>Things to Do</h2>
+            <a href="things_to_do.html">Explore</a>
+        </div>
+    </div>
+    
+    <div class="places-to-go">
+        <h2>Places to Visit</h2>
+        <div class="gallery">
+            <div class="place">
+                <img src="Place_1.png" alt="RK Beach">
+                <p>RK Beach (Rushikonda Beach)</p>
+                <a href="https://maps.app.goo.gl/XPx2GeNg4Mi35RgX7" target="_blank">View on Google Maps</a>
+            </div>
+            <div class="place">
+                <img src="Place_2.png" alt="Kailasagiri Hill Park">
+                <p>Kailasagiri Hill Park</p>
+                <a href="https://maps.app.goo.gl/PyXij2merm49N9iq8" target="_blank">View on Google Maps</a>
+            </div>
+            <div class="place">
+                <img src="Place_3.png" alt="Borra Caves">
+                <p>Borra Caves</p>
+                <a href="https://maps.app.goo.gl/5suAPgFaUTSkp9Up9" target="_blank">View on Google Maps</a>
+            </div>
+            <div class="place">
+                <img src="Place_4.png" alt="Simhachalam Temple">
+                <p>Simhachalam Temple</p>
+                <a href="https://maps.app.goo.gl/My4Y8WQQc41UDr2s5" target="_blank">View on Google Maps</a>
+            </div>
+        </div>
+    </div>
+    
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="things_to_do.html">Things To Do</a>
+        <a href="hotels.html">Hotels Nearby</a>
+    </div>
+  
+    <script src="script.js"></script>
+</body>
+</html>

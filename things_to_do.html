@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="Icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Visakhapatnam - Things to Do</title>
+    <style>
+        body, ul, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            min-height: 100vh;
+            background-color: #1b1b1b;
+            color: white;
+            font-family: Arial, sans-serif;
+            overflow-x: hidden;
+            margin: 0;
+        }
+
+        .navbar {
+            background-color: #292929;
+            color: white;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 10px 0;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background-color 0.3s;
+        }
+
+        .navbar .container {
+            display: flex;
+            justify-content: space-between;
+            max-width: 100%;
+            width: 100%;
+        }
+
+        .navbar .left-icon {
+            margin-left: 20px;
+            margin-right: auto;
+        }
+
+        .navbar h1 {
+            margin: 0;
+            font-size: 24px;
+            flex-grow: 1;
+            text-align: center;
+        }
+
+        .navbar .right-icon {
+            margin-right: 20px;
+            margin-left: auto;
+        }
+
+        .title {
+            font-size: 24px;
+            text-align: center;
+        }
+
+        .banner {
+            height: 600px;
+            max-width: 100%;
+            overflow: hidden;
+        }
+
+        .banner img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .activities {
+            display: flex;
+            justify-content: space-around;
+            margin: 50px 0;
+        }
+
+        .activity {
+            width: 45%;
+            text-align: center;
+            padding: 20px;
+            border: 1px solid #333;
+            border-radius: 10px;
+            background-color: #333;
+            transition: transform 0.3s;
+        }
+
+        .activity:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 10px rgba(255, 87, 51, 0.7);
+        }
+
+        .activity img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 10px;
+            transition: transform 0.3s;
+        }
+
+        .activity img:hover {
+            transform: scale(1.1);
+        }
+
+        .activity h2 {
+            font-size: 24px;
+            margin: 10px 0;
+        }
+
+        .activity p {
+            margin-bottom: 20px;
+        }
+
+        .things-to-do-title {
+            font-size: 32px;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .sidenav {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #111;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+        }
+
+        .sidenav a {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 25px;
+            color: #818181;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .sidenav a:hover {
+            color: #f1f1f1;
+        }
+
+        .sidenav .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+        }
+
+        @media screen and (max-height: 450px) {
+            .sidenav {padding-top: 15px;}
+            .sidenav a {font-size: 18px;}
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <i class="fas fa-bars left-icon" id="openNavbar" onclick="openNav()"></i>
+            <h1 class="title">Visakhapatnam</h1>
+            <i class="fas fa-home right-icon" id="goHome" onclick="goToHomePage()"></i>
+        </div>
+    </nav>
+
+    <div class="banner">
+        <img src="Banner_img.png" alt="Things to Do Banner">
+    </div>
+
+    <div class="things-to-do-title">Things to Do</div>
+
+    <div class="activities">
+        <div class="activity">
+            <img src="Adventure_Sports.jpg" alt="Adventure Sports">
+            <h2>Adventure Sports</h2>
+            <p>Experience thrilling adventure sports in Visakhapatnam. From water activities to hiking, there's something for everyone.</p>
+        </div>
+        <div class="activity">
+            <img src="Cultural_Events.jpg" alt="Cultural Events">
+            <h2>Cultural Events</h2>
+            <p>Explore the rich cultural events and festivals happening in Visakhapatnam. Immerse yourself in the vibrant local culture.</p>
+        </div>
+    </div>
+
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="things_to_do.html">Things To Do</a>
+        <a href="hotels.html">Hotels Nearby</a>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
